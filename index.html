@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frontend Mentor | Product preview card component</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: hsl(30, 38%, 92%);
+    }
+    
+    .container {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .image-mobile {
+      display: none;
+    }
+
+    .image-desktop {
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+      width: 350px;
+      height: 500px;
+    }
+
+    .main {
+      background-color: hsl(0, 0%, 100%);
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+      width: 350px;
+      height: 500px;
+    }
+
+    .title-1 {
+      font-family: Montserrat;
+      letter-spacing: 5px;
+      font-size: 12px;
+      font-weight: 700;
+      color: hsl(228, 12%, 48%);
+      margin-left: 35px;
+      margin-top: 30px;
+    }
+
+    .title-2 {
+      font-family: Fraunces;
+      font-weight: 700;
+      font-size: 35px;
+      margin-top: 20px;
+      margin-left: 35px;
+      color: hsl(212, 21%, 14%);
+    }
+
+    .main > p {
+      font-family: Montserrat;
+      font-size: 14px;
+      font-weight: 700;
+      color: hsl(228, 12%, 48%);
+      margin-left: 35px;
+      margin-top: 25px;
+      line-height: 25px;
+    }
+
+    .icon-cart {
+      margin-right: 10px;
+    }
+
+    .price-1 {
+      font-family: Fraunces;
+      font-weight: 700;
+      font-size: 2rem;
+      color: hsl(158, 36%, 37%);
+      margin-left: 2.3rem;
+      margin-top: 2rem;
+    }
+
+    .price-2 {
+      font-family: Montserrat;
+      font-size: 12px;
+      font-weight: 700;
+      color: hsl(228, 12%, 48%);
+      margin-left: 12rem;
+      margin-top: -26px;
+      text-decoration: line-through;
+    }
+
+    button > p {
+      font-family: Montserrat;
+      font-weight: 700;
+      color: white;
+      margin: 0;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    button {
+      display: flex;
+      align-items: center;
+      border: none;
+      border-radius: 10px;
+      background-color: hsl(158, 36%, 37%);
+      cursor: pointer;
+      transition: background 0.3s;
+      user-select: none;
+
+      margin-top: 45px;
+      margin-left: 35px;
+      padding: 85px;
+      padding-right: 85px;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+
+    button:hover {
+      background-color: hsl(159, 33%, 25%);
+    }
+
+    button:active {
+      background-color: hsl(160, 20%, 43%);
+    }
+
+    @media (min-width: 319px) and (max-width: 480px) {
+      .container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      .image-desktop {
+        display: none;
+      }
+
+      .main {
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 10px;
+        height: 400px;
+      }
+
+      .title-2 {
+        font-size: 30px;
+        margin-top: 10px;
+      }
+
+      .title-2 br {
+        display: none;
+      }
+
+      .main > p {
+        margin-top: 10px;
+        line-height: 25px
+      }
+
+      .price-1 {
+        margin-top: 30px;
+      }
+
+      button {
+        margin-top: 30px;
+      }
+
+      .image-mobile {
+        display: inline;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        margin-bottom: -4px;
+        width: 350px;
+        height: 250px;
+      }
+    }
+
+  </style>
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="image-product">
+      <img class="image-desktop" src="./images/image-product-desktop.jpg" alt="perfume e em volta folhas">
+      <img class="image-mobile" src="./images/image-product-mobile.jpg" alt="perfume e em volta folhas versão mobile">
+    </div>
+    <div class="main">
+      <header class="title-1">PERFUME</header>
+      <div class="title-2">Gabrielle<br/> Essence Eau<br/> De Parfum</div>
+      <p>A floral, solar and voluptuous<br/> interpretation composed by<br/> Olivier Polge, 
+         Perfumer-Creator<br/> for the House of CHANEL.</p>
+      <div class="price-1">$149.99</div>
+      <div class="price-2">$169.99</div>
+      
+      <a href="https://github.com/teampys6">
+        <button>
+          <img class="icon-cart" src="./images/icon-cart.svg" alt="icone cartunizado carrinho de mercado">
+          <p>Add to Cart</p> 
+        </button>
+      </a>
+    </div>
+  </div>
+</body>
+
+</html>
